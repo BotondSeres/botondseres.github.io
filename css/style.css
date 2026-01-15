@@ -1,0 +1,430 @@
+
+*{
+    box-sizing: border-box;
+    --default-background-black: rgb(8, 8, 8);
+    --main-highligh-color: #6EA1FF;
+    --secondary-highlight-color:#D791FF;
+}
+html{
+    background-color: var(--default-background-black)   ;
+}
+body{
+    overflow-x: hidden ;
+}
+section{
+    background-color: var(--default-background-black);
+}
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+em {
+    font-style: italic;
+}
+#logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero.is-dark.lpHero {
+    background-color: var(--default-background-black);
+    position: relative;
+    min-height: 20vh;
+    background: 
+        /* Your main gradient/image */
+        linear-gradient(135deg, var(--default-background-black) 0%, var(--default-background-black) 100%),;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero.is-dark.lpHero::before {
+  content: '';
+  position: absolute;
+  inset: 0; /* Covers full container */
+  background-color: var(--default-background-black);
+  background-image:
+    /* TOP DARKENING: top edge → down */
+    linear-gradient(to bottom, 
+      rgba(8, 8, 8, .9) 2%,  /* Sharp start post-navbar */
+      transparent 10%,     /* End 10% below navbar */
+      transparent 80%),
+    
+    /* BOTTOM DARKENING: bottom edge → up */
+    linear-gradient(to top, 
+      rgba(0,0,0,.9) 2%, 
+      transparent 10%,
+      transparent 80%),
+
+    /* Left edge fade: black → transparent → center */
+    linear-gradient(to right, 
+      rgba(110, 161, 255, 0.4) 0%, 
+      rgba(8,8,8,0.8) 30%, 
+      transparent 50%),
+    /* Right edge fade: center → transparent → black */
+    linear-gradient(to left, 
+    rgba(110, 161, 255, 0.4) 0%,
+    rgba(8, 8, 8, 0.8) 30%,
+    transparent 50%);
+
+    pointer-events: none; 
+    z-index: 1;
+}
+.hero.is-dark.lpHero .hero-body, .hero.is-dark.lpHero .hero-foot {
+  position: relative;
+  z-index: 2;
+}
+.eyebrowText{
+    --webkit-text-size-adjust: 100%;
+    --wm-toolbar-height: 1px;
+    line-height: 20px;
+    box-sizing: border-box;
+    color: var(--main-highligh-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: Oswald, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+.fascinationText{
+    box-sizing: border-box;
+    margin: 0.67em 0;
+    font-weight: bold;
+    margin-bottom: 20px;
+    overflow: visible;
+    z-index: 12;
+    color: #fff;
+    text-align: center;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Oswald, sans-serif;
+    position: relative;
+    font-size: 2.9vw;
+    line-height: 4.2vw;
+}
+@media screen and (min-width:1800px) {
+    .fascinationText{
+        font-size: 2vw;
+        line-height: 3vw;
+    }
+}
+@media screen and (max-width:800px) {
+    .fascinationText{
+        font-size: 5vw;
+        line-height: 7vw;
+    }
+}
+@media screen and (max-width:500px) {
+    .fascinationText{
+        font-size: 6vw;
+        line-height: 8vw;
+    }
+}
+#heroTextContainer{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+#navbar {
+    background-color: var(--default-background-black);
+}
+
+#navbarLogo {
+  transition: transform 0.25s ease-in-out;
+  /* or: transition: all 0.25s ease-in-out; */
+}
+
+#navbarLogo:hover {
+    transform: scale3d(.96, .96, 1.01);
+    transition: all .2s ease-in-out;
+    background-color: transparent;
+}
+.dividerContainer {
+    justify-content: center;
+    display: flex;
+}
+.dividerDesign{
+    width: 100%;
+    background-color: var(--default-background-black);
+    background-image: radial-gradient(circle, rgba(110, 161, 255, 1), rgba(56, 82, 129, 1) 40%, rgba(0, 107, 255, 0));
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1px;
+    padding-bottom: 0;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+#VSLcontainer {
+  position: relative;
+  box-sizing: border-box;
+  z-index: 3;
+  width: 50%;          /* or 100%, what you want */
+  margin: 0 auto 2rem;  /* keep your side margins & bottom gap */
+  padding-bottom: 28.20%; /* 16:9 height */
+  height: 0;           /* important: container height comes from padding */
+  overflow: hidden;
+  border-radius: 13px;
+  box-shadow:0 2px 6rem -.5rem rgba(211, 151, 246, 0.461);
+}
+
+@media screen and (max-width: 800px) {
+    #VSLcontainer {
+        width: 70%;          /* or 100%, what you want */
+        margin: 0 15% 2rem;  /* keep your side margins & bottom gap */
+        padding-bottom: 39.5%; /* 16:9 height */  
+    }
+}
+
+#VSLcontainer iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #14263f;
+    border-radius: 13px;
+
+}
+
+.post__video:has(iframe[src*="vimeo"])::before{
+  padding-top: unset;
+}
+
+
+.confirmation-text-3 {
+    color: #adadad;
+    text-align: center;
+    padding-top: .3125rem;
+    font-family: Montserrat, sans-serif;
+    font-size: .75rem;
+}
+
+
+.button.ctaButton {
+    display: flex;
+    color: #f3f3f3;
+    background-image: linear-gradient(#6EA1FF,#2f549a);
+    border-width: .1rem;
+    border-color: #3c5d9b;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 2vw;
+    font-weight: 700;
+    box-shadow: 0 0 8rem -.5rem rgba(216, 22, 0, 0);
+    border-radius: .6875rem;
+    padding: 1.2rem 80%;
+    width: 100%;
+    margin-top: 1.25rem;
+    transition: all .35s ease;
+    box-sizing: border-box;
+}
+@media screen and (min-width: 1200px) {
+    .button.ctaButton {
+        font-size: 1.3rem;
+    }
+    
+}
+@media screen and (max-width: 800px) {
+    .button.ctaButton {
+        font-size: 3vw;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    .button.ctaButton {
+        font-size: 4vw;
+    }
+    
+}
+.button.ctaButton:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(110, 161, 255, .2), 0 0 8rem -.5rem rgba(0, 83, 216, 0);
+}
+#salesContainer{
+    width: 30%;
+    margin: auto;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+    #salesContainer{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 500px) {
+    #salesContainer{
+        width: 50%;
+    }
+}
+#salesStatementsSection{
+    background-color: var(--default-background-black);
+
+}
+#salesStatementsGrid{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(51, 51, 51);
+    box-sizing: border-box;
+    grid-auto-columns: 1fr;
+    display: grid;
+    width: 100%;
+    column-gap: 0px;
+    row-gap: 0px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 0px;
+    max-width: 1070.4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+    #salesStatementsGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.SalesParagraph {
+    box-sizing: border-box;
+    margin-top: 0px;
+    color: rgb(201, 201, 201);
+    margin-bottom: 0px;
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+    padding-left: 10px;
+    font-size: 10px;
+    line-height: 14px;
+}
+.container.SalesParagraph{
+    color: rgb(51, 51, 51);
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    padding: 10px 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    justify-content: center;
+    justify-self: center;
+}
+#salesLetterSection{
+    background-color: #fff;
+}
+#salesLetterContainer {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.overlay-fade {
+    /*position: absolute;
+    left: -3%;*/
+    z-index: 999;
+    width: 110%;
+    box-shadow: none;
+    height: 120px;
+    background-image: linear-gradient(to bottom, black 20%, rgba(9, 9, 9, .9) 39%, rgba(186, 186, 186, .88) 65%, white);
+    filter: blur(9px);
+    background-size: 100% 102%; /* Slight oversize */
+    background-repeat: no-repeat;
+    top:0;
+    margin-top: -25px;
+    margin-left: -15px;
+}
+
+#letterLine{
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    text-align: center;
+    box-sizing: border-box;
+    width: 130px;
+    height: 3px;
+    background-color: #6EA1FF;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#signature{
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    color: #212529;
+    text-align: left;
+    margin-top: 0;
+    font-family: Inter, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 25px;
+    grid-area: span 1 / span 1 / span 1 / span 1;
+}
+.copy{
+    box-sizing: border-box;
+    margin-top: 0;
+    color: #212529;
+    text-align: left;
+    margin-bottom: 0;
+    font-family: Inter, sans-serif;
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 400;
+}
+.highlight{
+    color: #212529;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 400;
+    box-sizing: border-box;
+    background-color: #fffb19;
+    background-color: #ffe25fd7;
+}
+.copy strong{
+    color: black;
+    font-weight: 700;
+}
+
+#subHeadSalesLetter{
+    text-transform: uppercase;
+    font-size: 56px;
+    line-height: 48px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #212529;
+    font-family: Oswald, sans-serif;
+    text-align: center;
+}
+@media screen and (max-width: 660px){
+    #subHeadSalesLetter{
+        font-size: 8vw;
+    }
+    .copy{
+        font-size: 5vw;
+    }
+}
+@media screen and (max-width: 497px){
+    #subHeadSalesLetter{
+        font-size: 35px;
+    }
+}
+
+
+
+/*Text Highlight color: #FFFCF3D7
+  Main Color light: #6EA1FF
+  Secondary Color Light: #D791FF
+*/
+

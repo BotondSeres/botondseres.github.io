@@ -1,0 +1,208 @@
+/* #region FAQ */
+#FAQ{
+    padding: 4rem 2rem;
+}
+.faqContainer{
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
+}
+.faqList{
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 40px;
+    transition: all .2s;
+    padding: 2vw 5vw;
+    position:relative;
+    z-index: 1;
+}
+.faqItem{
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgb(255,255,255,0);
+    border-bottom-color: rgb(107, 107, 107);
+    cursor:pointer;
+    position: relative;
+    z-index: 3;
+}
+.faqButton{
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+    background-color: transparent;
+    background-image: none;
+    cursor: pointer;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+.faqButton-flex{
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.faqButton-title{
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    color: #fff;
+    font-weight: 700;
+}
+.faqOpenArrow{
+    height: 1.5rem;
+    width: 1.5rem;
+    transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+.faqContent{
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    overflow: hidden;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    max-height: 56px;
+}
+.faqContent-text{   
+    margin: 0;
+    padding: 1rem;
+    --tw-text-opacity: 1;
+    color: #fff;
+}
+li.faqContent-text{
+    padding-top:2px;
+    padding-bottom:2px;
+    display: list-item;
+}
+li.faqContent-text::before {  
+  content: "•";  
+  color: rgb(255, 255, 255);  
+  display: inline-block;  
+  width: 1em;  
+  margin-left: -1em;  
+}  
+
+.faqItem ul{
+    list-style-type: disc !important;
+}
+.topGradientFAQ{
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    min-height: auto;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, .1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 40px;
+    background-image: none;
+    box-shadow: 0 0 10px 7px rgba(215, 145, 255, .1);
+
+}
+.gradient-circle{
+    box-sizing: border-box;
+    width: 80%;
+    height: 300px;
+    border-radius: 1000%;
+    position: absolute;
+    z-index: 999;
+    top: -200px;
+    opacity: 1;
+    filter: blur(90px);
+    background-color: #6EA1FF;
+}
+.gradient-line{
+    width: 100%;
+    height: 1px;
+    opacity: .8;
+    position: absolute;
+    background-image: linear-gradient(to right, transparent, #1b4289 25%,  var(--main-highligh-color) 50%, #0c2148 72%, transparent);
+}
+/* #region Styling tabs */
+.tabs li{
+    cursor: pointer;    
+}
+.tabs li.is-active a{
+    color: #fff !important;
+    border-bottom-color: #fff !important;
+    border-bottom-width: 3px;
+
+}
+.tabs li a{
+    color: #a3a3a3 !important;
+    border-bottom-color: #787878 !important;
+    border-bottom-width: 2px ;
+     
+}
+.tabs li a:hover{
+    border-bottom-color:  var(--main-highligh-color) !important;
+    border-bottom-width: 2px;
+     
+}
+.tabs li.is-active a:hover{
+    border-bottom-color: #fff !important;
+    border-bottom-width: 3px;
+     
+}
+.tabs li a span{
+    font-size: 20px;
+    font-weight: normal;    
+}
+.tabs li.is-active a span{
+    font-size: 20px;
+    font-weight: bold;    
+}
+.tabs ul{
+    border-bottom-width: 0px !important;
+}
+#generalList{
+    margin-right: 20px;
+}
+#programList{
+    margin-left: 20px;
+}
+@media screen and (max-width: 449px){
+    #generalList{
+        margin-right: 5px;
+    }
+    #programList{
+        margin-left: 5px;
+    }
+    #generalLink{
+        padding: 2px 3px;
+    }
+    #programLink{
+        padding: 2px 3px;
+    }
+}
+/* #endregion */

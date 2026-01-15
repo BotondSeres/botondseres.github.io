@@ -1,0 +1,373 @@
+/* #region Breakdown*/
+#breakdownSection{
+    background-color: var(--default-background-black);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    z-index: 1;
+    color: #333;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    overflow: visible;
+}
+#breakdownProductImage{
+    width: 40vw;
+    height: auto;
+}
+.glowing-stats {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+    display: flex;
+    height: auto;
+}
+@media screen and (max-width: 1440px) {
+    .glowing-stats {
+        margin-top: 40px;
+    }
+    
+}
+.investor-grid.contained {
+    display: grid;
+    grid-auto-columns: 1fr;
+    width: 975px;
+    height: auto;
+    max-width: none;
+    grid-column-gap: 0rem;
+    grid-row-gap: .85rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.stat-card{
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(5px);
+    outline-offset: -3px;
+    cursor: pointer;
+    border: 2px rgba(255, 255, 255, .07);
+    border-radius: 1.2rem;
+    outline: 3px rgba(255, 255, 255, .03);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+.stat-card-heading {
+    width: 100%;
+    height: 45%;
+    background-image: linear-gradient(to top,  var(--main-highligh-color), #1f4385 62%, rgba(64, 17, 15, .3) 100%, rgba(3, 9, 21, 0));
+    color: #fff;
+    text-align: center;
+    letter-spacing: -4px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 90px;
+    font-weight: 700;
+    display: flex;
+    position: static;
+    top: 2%;
+    bottom: auto;
+    left: 45px;
+    right: 0%;
+}
+.stat-card-heading span {
+    font-size: 8rem;
+    line-height: 100%;
+}
+.stat-card-content {
+    opacity: .85;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.stat-card-content-wrapper{
+    z-index: 2;
+    max-width: 420px;
+    color: #c2cadd;
+    text-align: center;
+    padding: .75rem 1.5rem 1rem;
+    line-height: 1.3;
+    position: static;
+    align-items: center;
+    justify-content: center;
+}
+.stats-title {
+    opacity: 1;
+    color: #fff;
+    padding:0;
+    letter-spacing: 0;
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 1.3rem;
+    line-height: 100%;
+    font-weight: bold;
+}
+@media screen and (min-width: 1440px) {
+    .stats-title  {
+        text-align: center;
+        padding-right: 0;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .stats-title {
+        padding-right: 0px;
+    }
+}
+.stats-paragraph {
+    opacity: .32;
+    color: #fff;
+    padding-top: 4px;
+    height: auto;
+    
+}
+.breakdownContainer {
+    width: 900px;
+    max-width: 1920px;
+    max-width: 1920px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 95vw;
+    background-attachment: scroll !important;
+}
+.title-wrap-centre {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -20px;
+    display: flex;
+}
+.breakdownElementsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+/* #region Breakdown Cards*/
+.gradient-border-div {
+    background-image: linear-gradient(342deg,  var(--main-highligh-color), #030b1d 53%, #74a0f3);
+    border-radius: 20px;
+    margin-top: 60px;
+    padding: 2px;
+    box-shadow: 0 0 40px -2px rgba(9, 78, 251, 0.19);
+    background-attachment: scroll !important;
+}
+.gradient-div-fill{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-row-gap: 16px;
+    grid-column-gap: 0px;
+    box-shadow: none;
+    background-color: #0e0c0c;
+    border: 1px solid rgba(90, 90, 90, .21);
+    border-radius: 20px;
+    grid-template-rows: auto;
+    grid-template-columns: 2.5fr 1.5fr;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    padding: 30px 20px 20px 60px;
+}
+
+
+.breakdownElementTexts-spacing{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0 10px 10px;
+    display: flex;
+    grid-area: span 2 / span 1 / span 2 / span 1;
+}
+.breakdownElementTexts-title{
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    display: flex;
+}
+.breakdownElementTexts-title h3{
+    color: #fff;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+}
+.pricing-span{
+    color: #009b0a;
+    font-family: Instrument Sans, sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+
+}
+.verif-image {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+.breakdownElementTexts-paragraph{
+    color: #9a9a9a;
+    text-align: justify;
+    -webkit-text-stroke-color: #a68a8a;
+    text-transform: none;
+    font-family: Instrument Sans, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+}
+.breakdownElementProductImage{
+    max-width: 100%;
+    border-radius: 7px;
+    margin-left: 100px;
+    margin-right: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-area: span 2 / span 1 / span 2 / span 1;
+}
+@media screen and (max-width: 991px) {
+    .gradient-div-fill {
+        grid-row-gap: 0px;
+        grid-template-rows: minmax(auto, 1fr) auto;
+        grid-template-columns: 2.5fr;
+        justify-items: center;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .breakdownElementProductImage {
+        grid-area: 1 / 1 / 3 / 2;
+        max-width: 75vw;
+        margin-top: -175px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .gradient-border-div{
+        margin-top: 200px;
+    }
+    .breakdownElementTexts-spacing {
+        grid-area: span 2 / span 1 / span 2 / span 1;
+    }
+    .breakdownElementTexts-paragraph{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #roadmapSection{
+        height: 4800px;
+    }
+    .gradient-border-div{
+        max-width: 90vw;
+    }
+    .gradient-div-fill {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20px;
+        max-width: 90vw;
+    }
+    #breakdownProductImage{
+        width: 60vw;
+    }
+    .stat-card-heading span{
+        font-size: 12vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gradient-border-div{
+        max-width: 90vw;
+        margin-top: 100px;
+    }
+    .gradient-div-fill {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20px;
+        max-width: 90vw;
+    }
+    .breakdownElementProductImage {
+        margin-top: -107px;
+        max-width: 85vw;
+    }
+    .breakdownElementTexts-paragraph{
+        font-size: 15px;
+    }
+    .breakdownContainer{
+        width: 700px;
+        padding-top: 50px;
+    }
+    #breakdownSection{
+        padding: 20px 15px 60px;
+    }
+    .timeline-product-images img{
+        width: 60%;
+    }
+    .stat-card.is-hidden-small{
+        display: none;
+    }
+    .investor-grid.contained {
+        grid-template-columns: 1fr 1fr;
+    }
+    .stat-card-content-wrapper{
+        padding: .75rem 0.7rem 1rem;
+    }
+}
+@media screen and (max-width: 479px) {
+    .gradient-div-fill {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20px;
+    }
+    .breakdownElementProductImage {
+        max-width: 85vw;
+        border-radius: 6px;
+        
+    }
+    .breakdownElementTexts-paragraph{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .breakdownContainer{
+        max-width: 100%;
+    }
+        .timeline-product-images img{
+        width: 60%;
+    }
+    #roadmapSection{
+        height: 3750px;
+    }
+
+}
+
+/*#endregion Breakdown Cards*/
+/* #endregion Breakdown*/

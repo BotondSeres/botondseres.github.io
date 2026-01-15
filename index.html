@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>.wf-force-outline-none[tabindex="-1"]:focus{outline:none;}</style>
+    <meta charset="UTF-8">
+    <meta name="description" content="IT architecture crash course for SAAS startup founders, that allows them to meet corporate requirements and scale faster.">
+    <meta name="keywords" content="SAAS, Startup, It architecture, Scaling">
+    <meta name="author" content="Botond Seres">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bulma/bulma.css">
+    <link rel="stylesheet" href="./css/roadmap.css">
+    <link rel="stylesheet" href="./css/breakdown.css">
+    <link rel="stylesheet" href="./css/pricing.css">
+    <link rel="stylesheet" href="./css/gurusAndWhy.css">
+    <link rel="stylesheet" href="./css/faq.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>SAAS Masterclass</title>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    
+    <!--#region Hero-->
+    <!-- #region: Hero content -->
+    <div class="hero-head">
+        <nav id="navbar" class="navbar" role="navigation" aria-label="main navigation" data-theme="dark">
+            <div id="logoContainer" class="navbar-brand mx-auto">
+                <a id="navbarLogo" class="navbar-item" href="https://bulma.io">
+                    <svg width="640" height="160" viewBox="0 0 640 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M170 132.571V27.5908C170 25.5451 170.915 23.93 172.746 22.7456C174.576 21.5612 176.729 20.969 179.206 20.969H210.377C232.019 20.969 242.84 30.4441 242.84 49.3943C242.84 62.5303 238.264 71.0902 229.112 75.074C234.603 77.2275 238.748 80.2692 241.548 84.1992C244.347 88.1292 245.747 93.8627 245.747 101.4V104.791C245.747 116.743 242.84 125.437 237.026 130.875C231.211 136.312 223.351 139.031 213.445 139.031H179.206C176.514 139.031 174.307 138.385 172.584 137.093C170.861 135.801 170 134.293 170 132.571ZM190.834 120.619H209.085C219.529 120.619 224.751 114.751 224.751 103.015V100.431C224.751 94.401 223.432 90.0404 220.794 87.3486C218.156 84.6568 214.253 83.3109 209.085 83.3109H190.834V120.619ZM190.834 66.8371H208.923C213.122 66.8371 216.326 65.5989 218.533 63.1225C220.74 60.646 221.844 57.2544 221.844 52.9475C221.844 48.7483 220.686 45.4374 218.371 43.0148C216.057 40.5922 212.853 39.3809 208.762 39.3809H190.834V66.8371ZM260.283 103.015V27.4293C260.283 25.2759 261.306 23.6608 263.351 22.5841C265.397 21.5074 267.873 20.969 270.781 20.969C273.688 20.969 276.164 21.5074 278.21 22.5841C280.256 23.6608 281.279 25.2759 281.279 27.4293V103.015C281.279 115.397 287.2 121.588 299.044 121.588C310.888 121.588 316.81 115.397 316.81 103.015V27.4293C316.81 25.2759 317.833 23.6608 319.879 22.5841C321.925 21.5074 324.401 20.969 327.308 20.969C330.215 20.969 332.692 21.5074 334.738 22.5841C336.783 23.6608 337.806 25.2759 337.806 27.4293V103.015C337.806 115.72 334.28 125.061 327.227 131.036C320.175 137.012 310.781 140 299.044 140C287.308 140 277.914 137.039 270.861 131.117C263.809 125.195 260.283 115.828 260.283 103.015ZM356.703 132.409V27.4293C356.703 25.2759 357.725 23.6608 359.771 22.5841C361.817 21.5074 364.293 20.969 367.201 20.969C370.108 20.969 372.584 21.5074 374.63 22.5841C376.676 23.6608 377.699 25.2759 377.699 27.4293V120.619H417.106C419.044 120.619 420.579 121.534 421.709 123.365C422.84 125.195 423.405 127.349 423.405 129.825C423.405 132.301 422.84 134.455 421.709 136.285C420.579 138.116 419.044 139.031 417.106 139.031H365.908C363.432 139.031 361.279 138.439 359.448 137.254C357.618 136.07 356.703 134.455 356.703 132.409ZM434.872 132.409V31.467C434.872 27.9138 435.868 25.2759 437.86 23.5532C439.852 21.8304 442.355 20.969 445.37 20.969C449.354 20.969 452.423 21.6689 454.576 23.0686C456.729 24.4684 459.098 27.4832 461.682 32.1131L481.548 68.2907L501.413 32.1131C503.997 27.4832 506.393 24.4684 508.6 23.0686C510.808 21.6689 513.903 20.969 517.887 20.969C520.902 20.969 523.405 21.8304 525.397 23.5532C527.389 25.2759 528.385 27.9138 528.385 31.467V132.409C528.385 134.455 527.335 136.07 525.236 137.254C523.136 138.439 520.686 139.031 517.887 139.031C514.98 139.031 512.503 138.439 510.458 137.254C508.412 136.07 507.389 134.455 507.389 132.409V62.961L488.493 96.5545C486.985 99.354 484.616 100.754 481.386 100.754C478.264 100.754 475.949 99.354 474.441 96.5545L455.868 61.6689V132.409C455.868 134.455 454.818 136.07 452.719 137.254C450.619 138.439 448.17 139.031 445.37 139.031C442.463 139.031 439.987 138.439 437.941 137.254C435.895 136.07 434.872 134.455 434.872 132.409ZM539.529 130.31C539.529 130.094 539.637 129.556 539.852 128.694L571.023 27.1063C571.669 24.8452 573.257 23.0956 575.787 21.8573C578.318 20.6191 581.198 20 584.428 20C587.658 20 590.565 20.6191 593.149 21.8573C595.734 23.0956 597.349 24.8452 597.995 27.1063L629.166 128.694C629.381 129.556 629.489 130.094 629.489 130.31C629.489 132.678 628.035 134.724 625.128 136.447C622.221 138.17 619.26 139.031 616.245 139.031C612.261 139.031 609.892 137.631 609.139 134.832L603.001 113.351H566.016L559.879 134.832C559.125 137.631 556.756 139.031 552.773 139.031C549.65 139.031 546.662 138.197 543.809 136.528C540.956 134.859 539.529 132.786 539.529 130.31ZM570.377 96.8775H598.479L584.428 47.2948L570.377 96.8775Z" fill="white" class="bd-svg-white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 110L10 40L50 0L100 50L70 80L110 120L50 160L0 110Z" fill="#FFFFFF"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div class="dividerContainer">
+        <div class="dividerDesign"></div>
+    </div>
+    <section class="hero is-dark lpHero">
+        <div class="hero-body pb-5">
+            <div id="heroTextContainer" class="container has-text-centered">
+                <p class="eyebrowText">IT'S TRUE...</p>
+                <p class="fascinationText"><strong> SAAS ARCHITECTURE SPECIALIST REVEALS HIS <em>"SECRETS"</em> ON HOW TO BUILD A KILLER SOFTWARE AND MEET THE UNSPOKEN CORPORATE EXPECTATIONS. </strong></p>
+            </div>
+        </div>
+        <!-- Video container -->
+        <div id="VSLcontainer">
+            <iframe src="https://player.vimeo.com/video/1083566758?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; clipboard-write; encrypted-media;" referrerpolicy="strict-origin-when-cross-origin" title="Vimeo Placeholder (1080p with 30fps)"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>            
+        
+        
+        <div id="salesContainer" class="container has-text-centered pb-5">
+            <a onclick="scrollToSection('purchase-bootcamp', 2000)" id="top-button" class="button ctaButton">YES! GIVE ME ACCESS NOW</a>
+            <p class="confirmation-text-3"><em class="italic-text-2">Lock-in access at the discounted price before it goes up</em></p>
+        </div>
+    </section>
+    <section id="salesStatementsSection" class="section pb-5 pt-4">
+        <div class="dividerContainer">
+            <div class="dividerDesign"></div>
+        </div>
+        <div id="salesStatementsGrid">
+            <div class="container SalesParagraph">
+                <img src="/assets/double-tick-2.webp" loading="lazy" width="37" alt="Double tick icon" class="">
+                <p class="SalesParagraph">Minimal startup capital</p>
+            </div>
+            <div class="container SalesParagraph">
+                <img src="/assets/double-tick-2.webp" loading="lazy" width="37" alt="Double tick icon" class="">
+                <p class="SalesParagraph">What you need and nothing else</p>
+            </div>
+            <div class="container is-hidden-mobile SalesParagraph">
+                <img src="/assets/double-tick-2.webp" loading="lazy" width="37" alt="Double tick icon" class="">
+                <p class="SalesParagraph">Simple & Straight Forward</p>
+            </div>
+        </div>
+        <div class="dividerContainer">
+            <div class="dividerDesign"></div>
+        </div>
+    </section>
+        <!-- #endregion -->
+    <!-- #endregion -->
+    <div class="overlay-fade"></div>
+    <!-- #region Sales Letter -->
+    <section id="salesLetterSection" class="section pb-5 pt-5">
+        <div id="salesLetterContainer" class="container">
+            <p id="signature">From Botond Seres<br>Budapest, Hungary<br>January 2025</p>
+            <div id="letterLine"></div>    
+            <p class="copy">Dear SAAS founder,<br><br>
+
+            If you want to build an <strong>irresistible software</strong> product and have <strong>corporate money chasing you...</strong> <br><br>
+
+            Even if you've never made a single program before…<br><br>
+
+            And do so in record time, with minimal upfront investments, without having to study computer science for decades...<br><br>
+
+            Then <span class="highlight">this will be the most important program you'll ever watch.</span><br><br>
+
+            Here’s why:<br><br>
+
+            My name is Botond Seres, and a few years ago, I knew nothing about IT.<br><br>
+
+            I was an ambitious individual looking to earn a little extra money, but I soon discovered one thing: Software is a market that has never ever existed before. <br><br>
+
+            Why? <br><br>Because this trend is demanded by all businesses worldwide, it has infinite product possibilities, and since it’s a digital product, manufacturing costs are almost non-existent.<br><br>
+
+            I was like: “This is an infinite money method!” 😅 <br><br> Soon, I had to realize that you need to know a LOT to be able to meet the corporate expectations. Way more than I knew back then... <br><br>
+
+            But that small realization was enough to plant a burning desire in me...<br><br>
+
+            I read endless books,<br><br>
+
+            I watched endless courses,<br><br>
+
+            I became an undergraduate in Business Informatics at Corvinus University of Budapest,<br><br>
+
+            Got maximum grades on my courses,<br><br>
+
+            Took advice from countless mentors,<br><br>
+
+            I worked on numerous startups including some in the Health & Fitness and Marketing-communications niches. <br><br>
+
+            <span id="subHeadSalesLetter">FAST FORWARD TO TODAY</span><br><br>
+
+            Now, when I look back on my projects, I can clearly see what “more” was that separated me from outstanding success. <br><br>
+            
+            Those unspoken expectations from the corporate world determine whether a product is either successful or a failure.<br><br>
+            
+            Things like secure architecture, scalable infrastructure, and compliance standards. The stuff that separates hobby projects from software corporations actually buy.<br><br>
+            
+            I've spent the last 9 distilling everything from my degree, my projects, and my mentors into this <strong>zero-to-hero</strong> masterclass for those like my past self.<br><br>
+            
+            It's tested through years of development practice. This is my shortcut, so you don't repeat my mistakes.<br><br>
+            
+            I also <span class="highlight">built a roadmap for you that you can follow and have your software company launch on the fast track.</span><br><br>
+
+            Let’s get down to the details:</p>
+        </div>
+
+    </section>
+    <!-- #endregion -->
+    <!-- #region Roadmap -->
+    <section id="roadmapSection">
+        <div id="roadmapHeading" class="container has-text-centered pb-4">
+            <p><strong id="roadmapHeader"> OUR OBJECTIVE HERE IS SIMPLE... </strong></p>
+            <p id="roadmapSubHeader"> We aren't going to learn all there is to know about IT! It would take ages. However, we are going to learn what's necessary to build a Minimum Viable Product (MVP), then we'll get some external help from someone who has done this for decades to supercharge your product and prepare for production release.</p>
+        </div>
+        <div id="timelineContainer">
+            <div id="timeLineScrollBackground">
+                <div id="timeLineScrollLine"></div>
+            </div>
+            <div class="timeline_item">
+                <div class="timeline_left" style="will-change: opacity; opacity: 1;">
+                    <div class="sticky-text-left">
+                        <div class="timeline_date-text"><span class="month">Step</span><br>bootcamp</div>
+                        <div class="text-block-16 first">1<span class="text-span-44">st</span></div>
+                    </div>
+                </div>
+            <div class="timeline_centre">
+                <div class="timeline_circle dl-badge" style="will-change: background; background-color: rgba(255, 255, 255, 0);"><img src="/web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice.webp" loading="lazy" sizes="(max-width: 479px) 100px, (max-width: 767px) 160px, 180px" srcset="/web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice-p-500.webp 500w, /web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice-p-800.webp 800w, /web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice.webp 1000w" alt="" class="dl-badge"></div>
+            </div>
+            <div class="timeline_right" style="will-change: opacity; opacity: 1;">
+                <div class="timeline_text center"><strong>Fundamentals of software architecture<br></strong><br></div>
+                <div class="timeline-product-images">
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >
+                </div>
+                <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">These are the programs you <strong>unlock straight away</strong> when joining Digital Launchpad, as well as the community. That's where you're going to get guidance from coaches, as well as from other students who are further ahead of you in their journey.</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="timeline_item">
+                <div class="timeline_left" style="will-change: opacity; opacity: 1;">
+                    <div class="sticky-text-left">
+                        <div class="timeline_date-text "><span class="month">Step</span><br>The MVP</div>
+                        <div class="text-block-16 first">2<span class="text-span-44">nd</span></div>
+                    </div>
+                </div>
+            <div class="timeline_centre">
+                <div class="timeline_circle dl-badge" style="will-change: background; background-color: rgba(255, 255, 255, 0);"><img src="/web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice.webp" loading="lazy" sizes="(max-width: 479px) 100px, (max-width: 767px) 160px, 180px" srcset="/web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice-p-500.webp 500w, /web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice-p-800.webp 800w, /web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice.webp 1000w" alt="" class="dl-badge"></div>
+            </div>
+            <div class="timeline_right" style="will-change: opacity; opacity: 1;">
+                <div class="timeline_text center"><strong>Prototyping Your Solution<br></strong><br></div>
+                <div class="timeline-product-images">
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >
+                </div>                
+                <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">This section is where your idea first <i>comes to life</i>. You build an MVP using actual architecture methodologies (not just a quick hack) that a technical co-founder can scale directly to production.</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="timeline_item">
+                <div class="timeline_left" style="will-change: opacity; opacity: 1;">
+                    <div class="sticky-text-left">
+                        <div class="timeline_date-text "><span class="month">Step</span><br>expansion</div>
+                        <div class="text-block-16 first">3<span class="text-span-44">rd</span></div>
+                    </div>
+                </div>
+            <div class="timeline_centre">
+                <div class="timeline_circle dl-badge" style="will-change: background; background-color: rgba(255, 255, 255, 0);"><img src="/web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice.webp" loading="lazy" sizes="(max-width: 479px) 100px, (max-width: 767px) 160px, 180px" srcset="/web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice-p-500.webp 500w, /web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice-p-800.webp 800w, /web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice.webp 1000w" alt="" class="dl-badge"></div>
+            </div>
+            <div class="timeline_right" style="will-change: opacity; opacity: 1;">
+                <div class="timeline_text center"><strong>Learning More Skills<br></strong><br></div>
+                <div class="timeline-product-images">
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >
+                </div>                
+                <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">You'll expand your knowledge in system design, enabling you to effectively <b>communicate</b> what you'd like to include in your product and how you want it to work. Expect a bit more complex topics, giving you an <b>invaluable computer science skillset</b>.</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="timeline_item">
+                <div class="timeline_left" style="will-change: opacity; opacity: 1;">
+                    <div class="sticky-text-left">
+                        <div class="timeline_date-text "><span class="month">Step</span><br>Shortcut</div>
+                        <div class="text-block-16 first">4<span class="text-span-44">th</span></div>
+                    </div>
+                </div>
+            <div class="timeline_centre">
+                <div class="timeline_circle dl-badge" style="will-change: background; background-color: rgba(255, 255, 255, 0);"><img src="/web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice.webp" loading="lazy" sizes="(max-width: 479px) 100px, (max-width: 767px) 160px, 180px" srcset="/web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice-p-500.webp 500w, /web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice-p-800.webp 800w, /web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice.webp 1000w" alt="" class="dl-badge"></div>
+            </div>
+            <div class="timeline_right" style="will-change: opacity; opacity: 1;">
+                <div class="timeline_text center"><strong>Getting Technical Help<br></strong><br></div>
+                <div class="timeline-product-images">
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >
+                </div>                
+                <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">You'll learn how to find yourself a technical co-founder, so your business can <b>take the shortcut to decades of software engineering knowledge</b> without you needing to do it yourself. You are the inventor, but you'll also need someone to do the boring coding bits.</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="timeline_item">
+                <div class="timeline_left" style="will-change: opacity; opacity: 1;">
+                    <div class="sticky-text-left">
+                        <div class="timeline_date-text "><span class="month">Step</span><br>production</div>
+                        <div class="text-block-16 first">5<span class="text-span-44">th</span></div>
+                    </div>
+                </div>
+            <div class="timeline_centre">
+                <div class="timeline_circle dl-badge" style="will-change: background; background-color: rgba(255, 255, 255, 0);"><img src="/web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice.webp" loading="lazy" sizes="(max-width: 479px) 100px, (max-width: 767px) 160px, 180px" srcset="/web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice-p-500.webp 500w, /web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice-p-800.webp 800w, /web/20240324155210im_/https://lp.digital-launchpad.com/images/DL-ICONS-_0000_Apprentice.webp 1000w" alt="" class="dl-badge"></div>
+            </div>
+            <div class="timeline_right" style="will-change: opacity; opacity: 1;">
+                <div class="timeline_text center"><strong>MVP to Production Pipeline<br></strong><br></div>
+                <div class="timeline-product-images">
+                    <img src="https://www.placehold.co/1920x1080" loading="lazy" alt="" >   
+                </div>                
+                <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">How to launch your product with your new technical co-founder and <b>start earning what your idea deserves</b>. These are my secrets for making a software bulletproof, and ready to be tested on the battlefields.</div>
+                </div>
+            </div>
+            </div>
+
+
+
+        </div>
+        <div id="fixingFade"></div>
+    </section>
+    <!-- #endregion -->
+    <!-- #region Breakdown Section -->
+    <section id="breakdownSection">
+        <div id="breakdownHeading" class="container has-text-centered">
+            <p class="eyebrowText">WHAT'S INSIDE</p>
+            <p class="fascinationText"><strong>HERE'S WHAT YOU GET INSIDE THE PROGRAM</strong></p>
+            <img id="breakdownProductImage" src="https://placehold.co/1920x1140" alt="" class="image-74 dvd-first">
+        </div>
+        <div class="glowing-stats">
+            <div id="cards" class="investor-grid contained">
+                <div class="stat-card">
+                    <h1 class="stat-card-heading"><span class="text-span-17">7</span></h1>
+                    <div class="stat-card-content">
+                        <div class="stat-card-content-wrapper">
+                            <h3 class="stats-title">Bootcamp  Modules</h3>
+                            <div class="stats-paragraph">Inside the program, you'll gain instant access to 7 modules to save you years of trial and error. Teach you the basic skills that give us that competitive advantage over regular developers.<br></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h1 class="stat-card-heading"><span>13</span></h1>
+                    <div class="stat-card-content">
+                        <div class="stat-card-content-wrapper">
+                            <h3 class="stats-title">Unlockable Modules</h3>
+                            <div class="stats-paragraph">Once you levelled up and are ready to take your SAAS business to the next level, you'll be able to unlock 13 more of the unspoken corporate software needs.<br></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card is-hidden-small">
+                    <h1 class="stat-card-heading"><span>3</span></h1>
+                    <div class="stat-card-content">
+                        <div class="stat-card-content-wrapper">
+                            <h3 class="stats-title">Content Formats</h3>
+                            <div class="stats-paragraph">For faster and better learning, you'll get access to not only the guidebook, but also complementary video lessons and key takeaway notes.<br></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="max-width: 300px;" id="salesContainer" class="container has-text-centered pt-6">
+            <a onclick="scrollToSection('purchase-bootcamp', 1000)" id="breakdown-button" class="button ctaButton">YES! GIVE ME ACCESS NOW</a>
+            <p class="confirmation-text-3"><em class="italic-text-2">Lock-in access at the discounted price before it goes up</em></p>
+        </div>   
+
+        <div class="breakdownContainer">
+        <div class="title-wrap-centre">
+            <p class="eyebrowText">WHAT'S INSIDE</p>
+            <p class="fascinationText"><strong>HERE'S WHAT YOU GET INSIDE THE PROGRAM</strong></p>
+        </div>
+
+        <!-- #region Breakdown Element Cards -->
+         <!-- Bootcamp -->
+        <div class="breakdownElementsContainer">
+          <div class="gradient-border-div">
+            <div class="gradient-div-fill">
+              <div class="breakdownElementTexts">
+                <div class="breakdownElementTexts-spacing">
+                  <div class="breakdownElementTexts-title">
+                    <h3><strong>The Bootcamp</strong> <span class="pricing-span">(Sells for $900)</span></h3><img src="./assets/verification.png" loading="lazy" alt="" class="verif-image">
+                  </div>
+                  <p class="breakdownElementTexts-paragraph">A ZERO-TO-HERO guidebook on the fundamentals of software architecture. Rather than watching more coding courses, you'll learn the professional system DESIGN methodologies that make or break a software business. This is <b>what separates the everyday coder from the entrepreneur.</b></p>
+                </div>
+              </div><img src="https://placehold.co/1920x1334" loading="lazy" class="breakdownElementProductImage">
+            </div>
+          </div>
+
+          <!-- Video Lessons -->
+          <div class="gradient-border-div">
+            <div class="gradient-div-fill">
+              <div class="breakdownElementTexts">
+                <div class="breakdownElementTexts-spacing">
+                  <div class="breakdownElementTexts-title">
+                    <h3><strong>Video lessons</strong> <span class="pricing-span">(Sells for $1500)</span></h3><img src="./assets/verification.png" loading="lazy" alt="" class="verif-image">
+                  </div>
+                  <p class="breakdownElementTexts-paragraph">You are going to get access to bonus <b>webinar materials</b>, complementary to the bootcamp, to help you solidify your knowledge. Expect <b>real-life examples, implementations, and fun facts</b> to enrich your knowledge, so you easily master even the most abstract concepts.</p>
+                </div>
+              </div><img src="https://placehold.co/1920x1334" loading="lazy" class="breakdownElementProductImage">
+            </div>
+          </div>
+
+          <!-- Key takeaways -->
+          <div class="gradient-border-div">
+            <div class="gradient-div-fill">
+              <div class="breakdownElementTexts">
+                <div class="breakdownElementTexts-spacing">
+                  <div class="breakdownElementTexts-title">
+                    <h3><strong>Key Takeaways</strong> <span class="pricing-span">(Sells for $200)</span></h3><img src="./assets/verification.png" loading="lazy" alt="" class="verif-image">
+                  </div>
+                  <p class="breakdownElementTexts-paragraph">You'll also get key takeaway bullet point notes for each module, so that when you are using these concepts later, you can easily reference them. Once you understand the concepts, <b>they will become a part of your everyday toolbox while building and scaling your SAAS business</b>.</p>
+                </div>
+              </div><img src="https://placehold.co/1920x1334" loading="lazy" class="breakdownElementProductImage">
+            </div>
+          </div>
+
+          <!-- Continue The Journey -->
+          <div class="gradient-border-div">
+            <div class="gradient-div-fill">
+              <div class="breakdownElementTexts">
+                <div class="breakdownElementTexts-spacing">
+                  <div class="breakdownElementTexts-title">
+                    <h3><strong>The Journey</strong> <span class="pricing-span">(Sells for $2000+)</span></h3><img src="./assets/verification.png" loading="lazy" alt="" class="verif-image">
+                  </div>
+                  <p class="breakdownElementTexts-paragraph">Unlock the secrets of <b>getting external help</b> to get your software to the next level, <b>bypassing decades of learning</b>, while also learning software company launching <b>shortcuts</b>. How to make the most money out of your new skillset? Covered here!</p>
+                </div>
+              </div><img src="https://placehold.co/1920x1334" loading="lazy" class="breakdownElementProductImage">
+            </div>
+          </div>
+        </div>
+          
+        <!-- #endregion -->
+    </section>
+    <!-- #endregion -->
+    
+    <!-- #region Pricing -->
+    <section id="pricingHeader">
+        <div id="pricingHeadText" class="container has-text-centered">
+            <p class="eyebrowText">FIRST LAUNCH DISCOUNT</p>
+            <p class="pricingCTA"><strong>LOCK-IN ACCESS AT THE DISCOUNTED PRICE BEFORE THEY INCREASE WITH THE NEXT PROMOTION.</strong></p>
+            <p class="pricingSubHead">By joining the bootcamp plan, you'll receive all the bonuses listed above for the 7-module bootcamp series. You can go through it and unlock the next steps shown on the roadmap above once you completed the bootcamp. Or you can buy it with the extended edition as a bundle, saving 20% while ALSO saving it from our first launch promotion price rather than the original.</p>
+
+        </div>
+    </section>
+    <section id="pricingSection">
+        <div class="pricingContainer">
+            <div class="pricingTitle" role="tablist">
+                <a data-w-tab="Tab 1" id="pricingTitleTextDesign"role="tab" aria-selected="true">
+                    <div>SAAS Masterclass</div>
+                </a>
+            </div>
+            <!-- #region Bootcamp pricecard -->
+            <div id="purchase-bootcamp" style="display: block;">
+            <div id="pricingContent">
+                <div id="bootcampPrice" class="pricing">
+                    <div class="border-red-pricing">
+                        <div class="price-rectangle">
+                            <div class="pricingDiscount">From $100</div>
+                            <div class="pricing">Only $37</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bootcampPricingGrid">
+                  <div class="gradient-border-bootcamp-offer">
+                    <div class="offerCardBootcamp">
+                      <div class="offerCardBootcamp-content">
+                        <div class="offerCardBootcamp-inside">
+                          <div class="offerCardBootcamp-title">
+                            <div class="mb-20px">
+                              <div class ="mb-16px">
+                              <div style="margin-bottom: 8px;">
+                                <div style="color: #fff;">
+                                  <h3 class="bootcampTitle-display">The Bootcamp</h3>
+                                </div>
+                              </div>
+                              <div style="max-width: 100%;">
+                                <div style="color: #fff;">
+                                  <p class="offerCardBootcamp-paragraph">Get instant access to The Bootcamp + all the bonuses below</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="offerCardBootcamp-gridLayout">
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle1" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">Bootcamp E-book Guide 7 modules <span class="value-span">($600 Value)</span></div>
+                              </div>
+                            </div>
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle2" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">Bonus 7 Video Lessons <span class="value-span">($900 Value)</span></div>
+                              </div>
+                            </div>
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle3" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">7 Key Takeaway Notes <span class="value-span">($200 Value)</span></div>
+                              </div>
+                            </div>
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle4" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">Support Tutoring</div>
+                              </div>
+                            </div>
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle5" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">91% First Launch Discount</div>
+                              </div>
+                            </div>
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle6" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">Next Steps Are Unlockable After Completion</div>
+                              </div>
+                            </div>                     
+                          </div>
+                          <a href="#" target="_blank" class="purchaseButton">GET LIFETIME ACCESS NOW</a>
+                          <p class="confirmation-text"><em>Lock-in access at the discounted price before it goes up.</em></p>
+                        </div>
+                        <div class="badge-wrapper-top-right">
+                          <div class="badge-secondary-small-bold">One Time Purchase</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion -->
+            <!-- #region Upsell texts -->
+            <div class="upsellContainer">
+                <div class="upsellEyebrow">SAVE 20% MORE</div>
+                <h1 class="upsellHead">THE EXTENDED BUNDLE</h1>
+                <p class="upsellParagraph">When joining with the extended bundle, you save 20% compared to the bootcamp while ALSO saving it from our first launch promotion price rather than the original.</p>
+            </div>
+            <!-- #endregion -->
+            <!-- #region Extended Edition Pricing Card -->
+            <div style="display: block;">
+            <div id="pricingContent">
+                <div id="bootcampPrice" class="pricing">
+                    <div class="border-red-pricing extended">
+                        <div  style="height:160px;" class="price-rectangle">
+                            <div class="pricingDiscount extended">From $499</div>
+                            <div class="pricingDiscount extended new">to $49</div>
+                            <div class="pricing extended">Only $39</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bootcampPricingGrid">
+                  <div class="gradient-border-bootcamp-offer">
+                    <div class="offerCardBootcamp">
+                      <div class="offerCardBootcamp-content">
+                        <div class="offerCardBootcamp-inside">
+                          <div class="offerCardBootcamp-title">
+                            <div class="mb-20px">
+                              <div class ="mb-16px">
+                              <div style="margin-bottom: 8px;">
+                                <div style="color: #fff;">
+                                  <h3 class="bootcampTitle-display">SAAS MASTERCLASS</h3>
+                                </div>
+                              </div>
+                              <div style="max-width: 100%;">
+                                <div style="color: #fff;">
+                                  <p class="offerCardBootcamp-paragraph">Extended Edition. You are going to get the bootcamp, the MVP creation guide, the 13 bonus learning materials, the technical co-founder guide, and the MVP to production blueprint in one bundled package.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="offerCardBootcamp-gridLayout">
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle7" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">Everything you get w/ The Bootcamp <span class="value-span">($1,700 Value)</span></div>
+                              </div>
+                            </div>
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle8" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">Prototype Creation Guide <span class="value-span">($100+ Value)</span></div>
+                              </div>
+                            </div>
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle9" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">13 New Advanced Architecture Lessons <span class="value-span">($1,200 Value)</span></div>
+                              </div>
+                            </div>
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle10" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">13 Bonus Video lessons <span class="value-span">($1,800 Value)</span></div>
+                              </div>
+                            </div>
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle11" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">13 New Key Takeaway Notes <span class="value-span">($200 Value)</span></div>
+                              </div>
+                            </div>
+                            <div class="icon-list-item-wrapper">
+                                <svg class="icon-list" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>checkmark-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -1139.000000)" fill="#D791FF"> <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" id="checkmark-circle12" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                              <div style="color: #fff;">
+                                <div class="pricing-text-list-bold">Priority Support Tutoring</div>
+                              </div>
+                            </div>
+
+                          </div>
+                          <a href="#" target="_blank" class="purchaseButton">GET LIFETIME ACCESS NOW</a>
+                          <p class="confirmation-text"><em>Lock-in access at the discounted price before it goes up.</em></p>
+                        </div>
+                        <div class="badge-wrapper-top-right">
+                          <div class="badge-secondary-small-bold">One Time Purchase</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion -->
+    </div>
+    </section>
+    <!-- #endregion -->
+    <!-- #region GURU -->
+    <section id="guruSection">
+        <div class="gurusHeaderContainer">
+            <h1 class="gurusHeading"><strong>WHAT THE ONLINE GURUS NEVER TELL YOU...</strong></h1>
+            <div style="margin-top: 30px;" class="website">
+                <img style="width: 50wv;" src="https://placehold.co/500x315" alt=""> 
+          </div>
+        </div>
+        <div class="gurusCopyContainer">
+            <p class="copy">    
+                Look, I've been in your shoes, and believe me, watching another SAAS guru on YouTube won't help you get any further. <span class="highlight">You need actual education!</span><br><br>
+
+                Why?<br><br>
+
+                What I've noticed is that most creators out there, when it comes to SAAS, will teach you how to code, maybe even show you the 100th vibe coding AI tool, maybe even occasionally tell you a little something about UX design, but definitely won't tell you about the thing that really makes a software sell:<br><br>
+
+                <b>Architecture.</b> Big money is in the corporate world, and they deeply care about not just what a product does, but how it does it.<br><br>
+
+                That's understandable. They have <b>a reputation to protect, security, scalability, reliability, and profitability needs</b>, etc.<br><br>
+
+                This is the hidden segment of software development no one talks about. This is what tools you use, how you use them, how different software segments are connected, how they can be scaled, and so on.<br><br>
+
+                Why don't the gurus mention this?<br><br>
+
+                Because it's not SEXY. When people think about SAAS businesses, they think about the typical buzzwords, such as coding, AI, UX/UI design...<br><br>
+
+                The gurus are incentivized to make content and courses that most people are interested in. Hence, they ignore topics not on the sexy buzzwords list.<br><br>
+
+                This is good news for us, though! If most people never find out about these methods, we have a <span class="highlight">constant competitive advantage</span> on our hands.
+            </p>
+            <div id="guruButtonContainer">
+                <a onclick="scrollToSection('purchase-bootcamp')" class="purchaseButton">SAVE MY SPOT NOW </a>
+                <p class="confirmation-text"><em>You'll get redirected to our student platform to complete your checkout.</em></p>
+            </div>
+        </div>
+    </section>
+    <!-- #endregion -->
+    <div class="transitionWhiteToWhite"></div>
+    <!-- #region Why Cheap? -->
+    <section id="whyCheapSection">
+        <div class="gurusHeaderContainer">
+            <h1 class="gurusHeading why"><strong>WHY AM I OFFERING YOU SUCH OPPORTUNITY FOR SO CHEAP?</strong></h1>
+            <div class="website">
+                <img style="width: 100%;" src="./assets/10dollarbill.jpg" alt=""> 
+            </div>
+        </div>
+        <div class="gurusCopyContainer">
+            <p class="copy">
+                Here's the thing…<br><br>
+
+                The <b>more people you help, the more money you make.</b><br><br>
+
+                And since I want to make a lot of money with this course…<br><br>
+
+                <span class="highlight">I need to help a lot of people.</span><br><br>
+
+                It's a way better approach to achieve this in the education space to help a lot of people for less than fewer people for more.<br><br>
+
+                1000x10$ = 10,000$ + 1000 people who know you and trust you.<br><br>
+
+                10x1000$ = 10,000$ + 10 people who know you and trust you.<br><br>
+
+                With that, <b>my natural interests motivate me to help as many people as possible, and that's only possible by charging massively under the market</b>.<br><br>
+
+                That's my secret motive behind the SAAS Masterclass.
+            </p>
+        </div>
+    </section>
+    <!-- #endregion -->
+    <!-- #region FAQ -->
+    <section id="FAQ">
+        <div id="heroTextContainer" class="container has-text-centered">
+                <p class="eyebrowText">frequently asked questions</p>
+                <p class="fascinationText"><strong>Get Your questions answered</strong></p>
+        </div>
+        <div class="faqContainer">
+            <!-- #region FAQ Tabs -->
+            <div class="tabs is-centered">
+            <ul>
+                <li id="generalList" class="is-active">
+                <a id="generalLink">
+                    <span class="icon is-medium"
+                    ><i class="material-icons" aria-hidden="true">forum</i
+                    ></span>
+                    <span>General</span>
+                </a>
+                </li>
+                <li id="programList">
+                <a id="programLink">
+                    <span class="icon is-medium"
+                    ><i class="material-icons" aria-hidden="true">school</i
+                    ></span>
+                    <span>Program</span>
+                </a>
+                </li>
+            </ul>
+            </div>
+
+            <!-- #endregion -->
+            <!-- #region FAQ List 1 -->
+            <div id="faqGeneral" class="faqList">
+                <!-- #region FAQ Item 1 -->
+                <div class="faqItem">
+                    <button
+                    class="faqButton"
+                    onclick="toggleFAQItem(1)"
+                    >
+                    <div class="faqButton-flex">
+                        <span class="faqButton-title">What is the software architecture bootcamp?</span>
+                        <svg
+                        id="arrow-1"
+                        class="faqOpenArrow"
+                        fill="none"
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        >
+                        <path
+                            d="M19 9l-7 7-7-7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    </button>
+                    <div
+                    id="faqContent-1"
+                    class="faqContent"
+                    style="max-height: 0px;"
+                    >
+                    <p class="faqContent-text">
+                        The bootcamp is a Zero-to-Hero education material for SAAS entrepreneurs. It's aimed at providing you with the base skillset you need to build your software prototype in a way that's unspoken expected from major corporate players.
+                    </p>
+                    </div>
+
+                </div>
+                <!-- #endregion -->
+                <!-- #region FAQ Item 2 -->
+                <div class="faqItem">
+                    <button
+                    class="faqButton"
+                    onclick="toggleFAQItem(2)"
+                    > <!-- Change Toggle ID -->
+                    <div class="faqButton-flex">
+                        <span class="faqButton-title">How long will I have access to the materials?</span>
+                        <svg
+                        id="arrow-2"
+                        class="faqOpenArrow"
+                        fill="none"
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        > <!-- Change Arrow ID -->
+                        <path
+                            d="M19 9l-7 7-7-7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    </button>
+                    <div
+                    id="faqContent-2"
+                    class="faqContent"
+                    style="max-height: 0px;"
+                    ><!-- change Content ID -->
+                    <p class="faqContent-text">
+                        All learning materials are one-time purchases. Once you have purchased them, you can download everything, and it's yours for life.
+                    </p>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region FAQ Item 3 -->
+                <div class="faqItem">
+                    <button
+                    class="faqButton"
+                    onclick="toggleFAQItem(3)"
+                    > <!-- Change Toggle ID -->
+                    <div class="faqButton-flex">
+                        <span class="faqButton-title">Is this just another course?</span>
+                        <svg
+                        id="arrow-3"
+                        class="faqOpenArrow"
+                        fill="none"
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        > <!-- Change Arrow ID -->
+                        <path
+                            d="M19 9l-7 7-7-7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    </button>
+                    <div
+                    id="faqContent-3"
+                    class="faqContent"
+                    style="max-height: 0px;"
+                    ><!-- change Content ID -->
+                    <p class="faqContent-text">
+                        <i>Honest answer:</i> Maybe. Here's the real difference:
+                    </p>
+                    <ul style="padding-bottom: 1rem;">
+                        <li class="faqContent-text">Most SAAS courses teach you to CODE. This teaches you to DESIGN.</li>
+                        <li class="faqContent-text">Most are 40+ hours of fluff. This is distilled essentials.</li>
+                        <li class="faqContent-text">Most charge $2k+. I'm charging $9 because I need to help a lot of people get past the "confidence gap" first. </li>
+                    </ul>
+                </div>
+                </div>
+                <!-- endregion -->
+                <!-- #region FAQ Item 4 -->
+                <div class="faqItem">
+                    <button
+                    class="faqButton"
+                    onclick="toggleFAQItem(4)"
+                    > <!-- Change Toggle ID -->
+                    <div class="faqButton-flex">
+                        <span class="faqButton-title">Do I need any past experience?</span>
+                        <svg
+                        id="arrow-4"
+                        class="faqOpenArrow"
+                        fill="none"
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        > <!-- Change Arrow ID -->
+                        <path
+                            d="M19 9l-7 7-7-7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    </button>
+                    <div
+                    id="faqContent-4"
+                    class="faqContent"
+                    style="max-height: 0px;"
+                    ><!-- change Content ID -->
+                    <p class="faqContent-text">
+                        This isn't a coding course. You'll need to learn a bit of coding so that you can apply the concepts learned here to your own projects. In my personal experience, you can learn that much better from YouTube and your favourite AI tool than any course could teach you. <br><br>
+
+                        If you have minimal IT understanding, you'll be able to learn every concept in this bootcamp. More so, because any complex knowledge you'll need later will be taught in the modules before.
+                    </p>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region FAQ Item 5 -->
+                <div class="faqItem">
+                    <button
+                    class="faqButton"
+                    onclick="toggleFAQItem(5)"
+                    > <!-- Change Toggle ID -->
+                    <div class="faqButton-flex">
+                        <span class="faqButton-title">I'm still in college. Does it work for me?</span>
+                        <svg
+                        id="arrow-5"
+                        class="faqOpenArrow"
+                        fill="none"
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        > <!-- Change Arrow ID -->
+                        <path
+                            d="M19 9l-7 7-7-7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    </button>
+                    <div
+                    id="faqContent-5"
+                    class="faqContent"
+                    style="max-height: 0px;"
+                    ><!-- change Content ID -->
+                    <p class="faqContent-text">
+                        Yes. As long as you have a computer and access to the internet, you have everything you need to start building your software business.    
+                    </p>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <div class="topGradientFAQ"><div class="gradient-circle"></div><div class="gradient-line"></div></div>
+            </div>
+            <!-- #endregion -->
+            <!-- #region FAQ List 2 -->
+            <div id="faqProgram" class="faqList is-hidden">
+                <!-- #region FAQ Item 6 -->
+                <div class="faqItem">
+                    <button
+                    class="faqButton"
+                    onclick="toggleFAQItem(6)"
+                    >
+                    <div class="faqButton-flex">
+                        <span class="faqButton-title">Is the content live or recorded?</span>
+                        <svg
+                        id="arrow-6"
+                        class="faqOpenArrow"
+                        fill="none"
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        >
+                        <path
+                            d="M19 9l-7 7-7-7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    </button>
+                    <div
+                    id="faqContent-6"
+                    class="faqContent"
+                    style="max-height: 0px;"
+                    >
+                    <p class="faqContent-text">
+                        Both the bootcamp and the extended edition are based on recorded materials, so you can't learn whenever you'd like, at your own pace. However, throughout the course, you'll be given several chances to sign up for my newsletter, in which I can notify you of any new webinars or live events coming up in the next few months. They are in the development process and aim to further deepen your knowledge of Business Informatics.
+                    </p>
+                    </div>
+
+                </div>
+                
+                <!-- #endregion -->
+                <!-- #region FAQ Item 7 -->
+                <div class="faqItem">
+                    <button
+                    class="faqButton"
+                    onclick="toggleFAQItem(7)"
+                    > <!-- Change Toggle ID -->
+                    <div class="faqButton-flex">
+                        <span class="faqButton-title">What are the bonus webinar recordings about?</span>
+                        <svg
+                        id="arrow-7"
+                        class="faqOpenArrow"
+                        fill="none"
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        > <!-- Change Arrow ID -->
+                        <path
+                            d="M19 9l-7 7-7-7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    </button>
+                    <div
+                    id="faqContent-7"
+                    class="faqContent"
+                    style="max-height: 0px;"
+                    ><!-- change Content ID -->
+                    <p class="faqContent-text">
+                        They expand on the topics of the guide modules in a conversation style with whiteboard drawings, real-life examples, possible implementations, and even some fun facts.
+                    </p>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region FAQ Item 8 -->
+                <div class="faqItem">
+                    <button
+                    class="faqButton"
+                    onclick="toggleFAQItem(8)"
+                    > <!-- Change Toggle ID -->
+                    <div class="faqButton-flex">
+                        <span class="faqButton-title">What if I get stuck throughout the course?</span>
+                        <svg
+                        id="arrow-8"
+                        class="faqOpenArrow"
+                        fill="none"
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        > <!-- Change Arrow ID -->
+                        <path
+                            d="M19 9l-7 7-7-7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    </button>
+                    <div
+                    id="faqContent-8"
+                    class="faqContent"
+                    style="max-height: 0px;"
+                    ><!-- change Content ID -->
+                    <p class="faqContent-text">
+                        My mission is to get you fully understand the topics covered in here. Whatever questions you may have, I'm here to assist you. Feel free to contact me at <a href="mailto:support@botondseres.dev">support@botondseres.dev</a>
+                    </p>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region FAQ Item 9 -->
+                <div class="faqItem">
+                    <button
+                    class="faqButton"
+                    onclick="toggleFAQItem(9)"
+                    > <!-- Change Toggle ID -->
+                    <div class="faqButton-flex">
+                        <span class="faqButton-title">What's the Extended Edition?</span>
+                        <svg
+                        id="arrow-9"
+                        class="faqOpenArrow"
+                        fill="none"
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        > <!-- Change Arrow ID -->
+                        <path
+                            d="M19 9l-7 7-7-7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    </button>
+                    <div
+                    id="faqContent-9"
+                    class="faqContent"
+                    style="max-height: 0px;"
+                    ><!-- change Content ID -->
+                    <p class="faqContent-text">
+                        When you have learned everything inside the bootcamp, you'll then be guided to find a technical co-founder to help you take your solution from a minimal viable product to a production-ready version. This will allow you to focus on the <i>creation</i> rather than the hardcore learning for decades. <br><br>
+
+                        Then I'll give you a blueprint on how to launch a software on the corporate market to maximize profits and achieve your strategic goals.
+                    </p>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region FAQ Item 10 -->
+                <div class="faqItem">
+                    <button
+                    class="faqButton"
+                    onclick="toggleFAQItem(10)"
+                    > <!-- Change Toggle ID -->
+                    <div class="faqButton-flex">
+                        <span class="faqButton-title">What's inside the Extended Edition?</span>
+                        <svg
+                        id="arrow-10"
+                        class="faqOpenArrow"
+                        fill="none"
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        > <!-- Change Arrow ID -->
+                        <path
+                            d="M19 9l-7 7-7-7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    </button>
+                    <div
+                    id="faqContent-10"
+                    class="faqContent"
+                    style="max-height: 0px;"
+                    ><!-- change Content ID -->
+                    <p class="faqContent-text">
+                        The extended edition contains 13 extra guide modules, 13 extra complementary video material, and 13 extra key takeaway reference notes. Same style as the bootcamp, advanced topics, double size.
+                    </p>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                
+                <div class="topGradientFAQ"><div class="gradient-circle"></div><div class="gradient-line"></div></div>
+            </div>
+            <!-- #endregion -->
+            
+        </div>
+
+    </section>
+    <!-- #endregion -->
+    <!-- #region Footer -->
+    <footer>
+        <div class="footerContainer">
+            <div id="logoContainer" class="navbar-brand mx-auto">
+                <a id="navbarLogo" class="navbar-item" onclick="scrollToSection('navbar', 3000)">
+                    <svg width="112" height="28" viewBox="0 0 640 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M170 132.571V27.5908C170 25.5451 170.915 23.93 172.746 22.7456C174.576 21.5612 176.729 20.969 179.206 20.969H210.377C232.019 20.969 242.84 30.4441 242.84 49.3943C242.84 62.5303 238.264 71.0902 229.112 75.074C234.603 77.2275 238.748 80.2692 241.548 84.1992C244.347 88.1292 245.747 93.8627 245.747 101.4V104.791C245.747 116.743 242.84 125.437 237.026 130.875C231.211 136.312 223.351 139.031 213.445 139.031H179.206C176.514 139.031 174.307 138.385 172.584 137.093C170.861 135.801 170 134.293 170 132.571ZM190.834 120.619H209.085C219.529 120.619 224.751 114.751 224.751 103.015V100.431C224.751 94.401 223.432 90.0404 220.794 87.3486C218.156 84.6568 214.253 83.3109 209.085 83.3109H190.834V120.619ZM190.834 66.8371H208.923C213.122 66.8371 216.326 65.5989 218.533 63.1225C220.74 60.646 221.844 57.2544 221.844 52.9475C221.844 48.7483 220.686 45.4374 218.371 43.0148C216.057 40.5922 212.853 39.3809 208.762 39.3809H190.834V66.8371ZM260.283 103.015V27.4293C260.283 25.2759 261.306 23.6608 263.351 22.5841C265.397 21.5074 267.873 20.969 270.781 20.969C273.688 20.969 276.164 21.5074 278.21 22.5841C280.256 23.6608 281.279 25.2759 281.279 27.4293V103.015C281.279 115.397 287.2 121.588 299.044 121.588C310.888 121.588 316.81 115.397 316.81 103.015V27.4293C316.81 25.2759 317.833 23.6608 319.879 22.5841C321.925 21.5074 324.401 20.969 327.308 20.969C330.215 20.969 332.692 21.5074 334.738 22.5841C336.783 23.6608 337.806 25.2759 337.806 27.4293V103.015C337.806 115.72 334.28 125.061 327.227 131.036C320.175 137.012 310.781 140 299.044 140C287.308 140 277.914 137.039 270.861 131.117C263.809 125.195 260.283 115.828 260.283 103.015ZM356.703 132.409V27.4293C356.703 25.2759 357.725 23.6608 359.771 22.5841C361.817 21.5074 364.293 20.969 367.201 20.969C370.108 20.969 372.584 21.5074 374.63 22.5841C376.676 23.6608 377.699 25.2759 377.699 27.4293V120.619H417.106C419.044 120.619 420.579 121.534 421.709 123.365C422.84 125.195 423.405 127.349 423.405 129.825C423.405 132.301 422.84 134.455 421.709 136.285C420.579 138.116 419.044 139.031 417.106 139.031H365.908C363.432 139.031 361.279 138.439 359.448 137.254C357.618 136.07 356.703 134.455 356.703 132.409ZM434.872 132.409V31.467C434.872 27.9138 435.868 25.2759 437.86 23.5532C439.852 21.8304 442.355 20.969 445.37 20.969C449.354 20.969 452.423 21.6689 454.576 23.0686C456.729 24.4684 459.098 27.4832 461.682 32.1131L481.548 68.2907L501.413 32.1131C503.997 27.4832 506.393 24.4684 508.6 23.0686C510.808 21.6689 513.903 20.969 517.887 20.969C520.902 20.969 523.405 21.8304 525.397 23.5532C527.389 25.2759 528.385 27.9138 528.385 31.467V132.409C528.385 134.455 527.335 136.07 525.236 137.254C523.136 138.439 520.686 139.031 517.887 139.031C514.98 139.031 512.503 138.439 510.458 137.254C508.412 136.07 507.389 134.455 507.389 132.409V62.961L488.493 96.5545C486.985 99.354 484.616 100.754 481.386 100.754C478.264 100.754 475.949 99.354 474.441 96.5545L455.868 61.6689V132.409C455.868 134.455 454.818 136.07 452.719 137.254C450.619 138.439 448.17 139.031 445.37 139.031C442.463 139.031 439.987 138.439 437.941 137.254C435.895 136.07 434.872 134.455 434.872 132.409ZM539.529 130.31C539.529 130.094 539.637 129.556 539.852 128.694L571.023 27.1063C571.669 24.8452 573.257 23.0956 575.787 21.8573C578.318 20.6191 581.198 20 584.428 20C587.658 20 590.565 20.6191 593.149 21.8573C595.734 23.0956 597.349 24.8452 597.995 27.1063L629.166 128.694C629.381 129.556 629.489 130.094 629.489 130.31C629.489 132.678 628.035 134.724 625.128 136.447C622.221 138.17 619.26 139.031 616.245 139.031C612.261 139.031 609.892 137.631 609.139 134.832L603.001 113.351H566.016L559.879 134.832C559.125 137.631 556.756 139.031 552.773 139.031C549.65 139.031 546.662 138.197 543.809 136.528C540.956 134.859 539.529 132.786 539.529 130.31ZM570.377 96.8775H598.479L584.428 47.2948L570.377 96.8775Z" fill="white" class="bd-svg-white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 110L10 40L50 0L100 50L70 80L110 120L50 160L0 110Z" fill="#FFFFFF"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-links">
+                <a href="https://www.botondseres.dev/privacy-policy" target="_blank" class="link-footer">Privacy Policy</a> | 
+                <a href="https://www.botondseres.dev/terms-conditions" target="_blank" class="link-footer">Terms &amp; Conditions</a>
+            </p>
+            <p class="footer-text">&#xA9;2025 Botond Seres. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- #endregion -->
+    <script src="./js/timerline.js"></script>
+    <script src="./js/faq.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

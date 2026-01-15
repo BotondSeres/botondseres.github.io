@@ -1,0 +1,554 @@
+/* #region Pricing */
+
+    #pricingHeader{
+        background-color: var(--default-background-black);
+        z-index: 1;
+    }
+    .pricingSubHead{
+        margin: 0;
+        font-weight: normal;
+        overflow: visible;
+        z-index: 2;
+        text-align: center;
+        letter-spacing: .5px;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Inter, sans-serif;
+        position: relative;
+        font-size: 1.3vw;
+        line-height: 1.5vw;
+        color: #d3d3d3;
+        max-width: 70vw;
+    }
+    @media screen and (min-width: 1200px) {
+        #pricingSubHead{
+        font-size: 1vw;
+        }
+    }
+
+    #pricingSection {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 140px;
+        display: flex;
+        z-index: 1;
+    }
+    .pricingContainer{
+        position:  relative;
+    }
+    .pricingTitle{
+        position: relative;
+        justify-content: center;
+        padding-bottom: 10px;
+        display: flex;
+    }
+    #pricingTitleTextDesign{
+        max-width: 100%;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        text-decoration: none;
+        padding: 9px 30px;
+        text-align: left;
+        cursor: pointer;
+        color: #fff;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        border: 1px solid #333;
+        border-radius: 14px;
+        /*margin-right: 10px*/;
+        font-family: Oswald, sans-serif;
+        font-size: 15px;
+        transition: all .2s;
+        background-color:  var(--main-highligh-color);
+        font-weight: 600;
+    }
+    #pricingTitleTextDesign:hover{
+        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(21, 9, 251, 0.1), 0 0 8rem -.5rem rgba(4, 0, 216, 0);
+    }
+    #pricingContent{
+        position:relative;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pricing{
+        width: 860px;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        display: flex;
+    }
+    .border-red-pricing {
+        background-image: linear-gradient( var(--main-highligh-color) 35%, #03041d 85%, #1d0303 );
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 45%;
+        margin-top: 60px;
+        padding-top: 1px;
+        padding-left: 1px;
+        padding-right: 1px;
+        /*box-shadow: 0 0 40px -2px rgba(251, 68, 9, .19);*/
+        background-attachment: scroll !important;
+
+    }
+    .price-rectangle {  
+        width: 100%;
+        height: 120px;
+        flex-direction: column;
+        display: flex;
+        box-shadow: none;
+        background-color: var(--default-background-black);
+        border: 1px solid var(--default-background-black);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-top: 60px;
+        padding-top: 1px;
+        padding-left: 1px;
+        padding-right: 1px;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+
+    }
+    .pricingDiscount{
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 15px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        font-family: Instrument Sans, sans-serif;
+        color: #627083;
+        -webkit-text-fill-color: #627083;
+        background-image:none;
+        background-clip: border-box;
+        font-size: 1.8rem;
+        text-decoration: line-through;
+    }
+    .pricing {
+        color: #fff;
+        text-align: center;
+        text-transform: capitalize;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(rgba(177, 177, 177, .55), #fff 0%, rgba(255, 255, 255, 0.756) 70%, rgb(0, 0, 0) 90%);
+        background-clip: text;
+        margin-top: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        font-family: Instrument Sans, sans-serif;
+        font-size: 3.2rem;
+    }
+    .bootcampPricingGrid{
+        color: #333;
+        box-sizing: border-box;
+        grid-column-gap: 32px;
+        grid-row-gap: 28px;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-auto-columns: 1fr;
+        align-items: stretch;
+        margin-top: 0;
+        display: grid;
+    }
+    .gradient-border-bootcamp-offer{
+        background-image: linear-gradient(30deg,  var(--main-highligh-color), #01020c 49%,  var(--main-highligh-color));
+        border-radius: 24px;
+        padding: 2px;
+        transition: all .2s;
+        transform: none;
+        box-shadow: 0 0 40px -3px rgba(9, 61, 251, 0.19);
+        grid-area: span 1 / span 1 / span 1 / span 1;
+    }
+    .gradient-border-bootcamp-offer:hover{
+        transform: translate(0px, -6px)
+    }
+    .offerCardBootcamp{
+        border: 1px solid rgba(239, 240, 246, .08);
+        border-radius: 24px;
+        transition: all .2s;
+        position: relative;
+        box-shadow: 0 2px 7px rgba(20, 20, 43, .06);
+        width: 100%;
+        height: 100%;
+        max-width: 770px;
+        background-color: #0c0c0c;
+    }
+    .offerCardBootcamp-content{            
+        height: 100%;
+        padding: 40px 50px;
+    }
+    .offerCardBootcamp-inside{
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        display: flex;
+        overflow: visible;
+    }
+    .offerCardBootcamp-title{
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        align-items: center;
+        margin-bottom: 15px;
+        display: flex;
+    }
+    .mb-20px{
+        margin-bottom: 20px;
+    }
+    .bootcampTitle-display{
+        color: #fff;
+        letter-spacing: -.5px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 34px;
+    }
+    .offerCardBootcamp-paragraph{
+        margin-top: 0;
+        color: #9a9a9a;
+        margin-bottom: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans, sans-serif;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .offerCardBootcamp-gridLayout{
+        box-sizing: border-box;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: 1fr;
+        display: grid;
+        grid-column-gap: 11px;
+        grid-row-gap: 10px;
+        margin-top: -27px;
+        margin-bottom: 10px;
+    }
+
+    .icon-list-item-wrapper{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        grid-area: 1 / 1 / 0 / 2;
+    }
+    .icon-list{
+        border: 0;
+        vertical-align: middle;
+        display: inline-block;
+        max-width: 22px;
+        /*filter: hue-rotate(135deg);*/
+        margin-right: 16px;
+        background-color: rgb(31, 31, 31);
+        border-radius: 100%;
+        box-shadow: 0 0 3px 5px rgba(215, 145, 255, .2);
+        width: 22px;
+        height: 22px;
+        overflow: visible;
+        
+    }
+    .pricing-text-list-bold{
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    .value-span{
+        color: #009b0a;
+    }
+    .purchaseButton{
+        
+        line-height: inherit;
+        text-decoration: none;
+        width: 100%;
+        opacity: 1;
+        cursor: pointer;
+        background-color: #efff04;
+        border: .05rem solid #d4da2b;
+        border-radius: .6875rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.25rem;
+        padding: 1.2rem 0;
+        font-size: 1.0625rem;
+        transition: all .35s;
+        display: flex;
+        color: #f3f3f3;
+        background-image: linear-gradient( var(--main-highligh-color), #173772);
+        border-width: .1rem;
+        border-color: #38558a;
+        font-weight: 700;
+        box-shadow: 0 0 8rem -.5rem rgba(216, 22, 0, 0);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        .purchaseButton {
+            font-size: 1.3rem;
+        }
+        
+    }
+    @media screen and (max-width: 800px) {
+        .purchaseButton {
+            font-size: 3vw;
+        }
+        
+    }
+    @media screen and (max-width: 500px) {
+        .purchaseButton {
+            font-size: 4vw;
+        }
+        
+    }
+    .purchaseButton:hover{
+        transform: scale(1.03);
+        box-shadow: 0 0 30px rgba(251, 68, 9, .2), 0 0 8rem -.5rem rgba(216, 22, 0, 0);
+    }
+    .confirmation-text{
+        margin-top: 0;
+        margin-bottom: 10px;
+        text-align: center;
+        padding-top: .3125rem;
+        font-family: Montserrat, sans-serif;
+        font-size: .75rem;
+        color: #8a8a8a;
+        text-transform: none;
+    }
+    .badge-wrapper-top-right {
+        background-image: linear-gradient(to bottom,  var(--main-highligh-color), var(--main-highligh-color));
+        border-radius: 40px;
+        padding: 1px;
+        position: absolute;
+        top: 20px;
+        bottom: auto;
+        left: auto;
+        right: 20px;
+    }
+    .badge-secondary-small-bold {
+        color: #fff;
+        text-align: center;
+        letter-spacing: .5px;
+        background-color: #111;
+        border: 1px #484d54;
+        border-radius: 40px;
+        padding: 18px 18px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 2px 12px rgba(20, 20, 43, .06);
+    }
+    .mb-16px{
+        margin-bottom:16px;
+    }
+    .pricingCTA{
+        box-sizing: border-box;
+        margin: 0.67em 0;
+        font-weight: bold;
+        margin-bottom: 20px;
+        overflow: visible;
+        z-index: 12;
+        color: #fff;
+        text-align: center;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Oswald, sans-serif;
+        position: relative;
+        font-size: 2.9vw;
+        line-height: 4.2vw;
+        max-width: 80vw;
+    }
+    .upsellContainer{
+        max-width: 800px;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: .3125rem;
+        text-align: center;
+        flex-direction: column;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-auto-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        margin-bottom: 0;
+        position: relative;
+        margin-top: 100px;
+    }
+    .upsellEyebrow{
+        color:  var(--main-highligh-color);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: Oswald, sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        grid-area: span 1 / span 1 / span 1 / span 1;
+    }
+    .upsellHead{
+        margin: 0.67em 0;
+        font-weight: bold;
+        width: 100%;
+        color: #fff;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-family: Oswald, sans-serif;
+        font-size: 51px;
+        line-height: 54px;
+    }
+    .upsellParagraph{
+        color: #a7a7a7;
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 1.125rem;
+        line-height: 150%;
+        width: auto;
+        opacity: .8;
+        margin-top: 10px;
+    }
+    .pricingDiscount.extended{
+        opacity: .7; 
+        font-size: 1.5rem;
+    }
+    .pricingDiscount.extended.new{
+        opacity: .9; 
+        font-size: 1.7rem;
+    }
+    .pricing.extended{
+        font-size: 2.9rem;
+    }
+    .border-red-pricing.extended{
+        width: 47%;
+    }
+    @media screen and (max-width: 991px) {
+        .bootcampPricingGrid {
+            grid-row-gap: 40px;
+            grid-template-columns: 1fr;
+        }
+        .offerCardBootcamp{
+            width: 100%;
+        }
+        .brix---pricing-content-v10-popular {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .pricingCTA{
+            font-size: 4vw;
+            line-height: 5.2vw;
+            max-width: 85vw;
+        }
+        .pricingSubHead{
+            font-size: 1.8vw;
+            line-height: 3.2vw;
+            max-width: 85vw;
+        }
+    .upsellEyebrow{
+        font-size: 20px;
+        font-weight: 500;
+        grid-area: span 1 / span 1 / span 1 / span 1;
+    }
+    .upsellHead{
+        font-size: 45px;
+        line-height: 54px;
+    }
+    .upsellParagraph{
+        font-size: 1rem;
+        line-height: 150%;
+        max-width: 90vw;
+    }
+    }
+    @media screen and (max-width: 767px) {
+        .bootcampPricingGrid {
+            grid-template-columns: 1fr;
+        }
+        .bootcampPricingGrid{
+            width: 90vw;
+        }
+        .offerCardBootcamp-content {
+            padding-bottom: 40px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .mb-16px {
+            margin-bottom: 8px;
+        }
+        .offerCardBootcamp-gridLayout    {
+            grid-column-gap: 0px;
+            grid-template-columns: 1fr;
+        }
+        .badge-secondary-small-bold {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        .badge-wrapper-top-right {
+            top: 10px;
+            right: 14px;
+        }
+        .pricingCTA{
+            font-size: 5vw;
+            line-height: 6vw;
+            max-width: 90vw;
+        }
+        .pricingSubHead{
+            font-size: 2.5vw;
+            line-height: 3.2vw;
+            max-width: 85vw;
+        }
+    }
+    @media screen and (max-width: 479px) {
+        .offerCardBootcamp-content{
+            padding-top: 50px;
+        }
+        .offerCardBootcamp-gridLayout {
+            grid-template-rows: auto auto auto auto auto auto auto auto;
+            grid-template-columns: 1fr;
+            grid-auto-flow: row;
+            margin-top: -21px;
+        }
+        .bootcampPricingGrid{
+            width: 90vw;
+        }
+        .badge-secondary-small-bold {
+            padding: 10px 16px;
+            font-size: 3vw;
+            line-height: 16px;
+        }
+        .pricingSubHead{
+            font-size: 3.5vw;
+            line-height: 4.2vw;
+            max-width: 90vw;
+        }
+        .border-red-pricing{
+            width: 60vw;
+        }
+        .border-red-pricing.extended{
+            width: 62vw;
+        }
+        .price-rectangle{
+            height:150px;
+        }
+        .upsellHead{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    }
+    /* #endregion */
