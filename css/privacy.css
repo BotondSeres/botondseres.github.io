@@ -52,6 +52,9 @@
     line-height: 30px;
     font-family: Montserrat, sans-serif;
 }
+.privacy-paragraph strong{
+    color:rgb(129, 129, 129);
+}
 
 @media screen and (max-width: 991px) {
     .privacy-heading {
