@@ -28,6 +28,8 @@
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    align-self: start;
+    padding-bottom: 0px;
 
 }
 .gurusHeading{
@@ -115,7 +117,7 @@
     background-color: #fff;
     color: #212529;
     padding-top: 140px;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
 }
 .gurusHeaderContainer{
     max-width: 90vw;
@@ -134,13 +136,6 @@
     display: grid;
     margin-bottom: 0;
     position: relative;
-}
-.gurusCopyContainer{
-    padding: 4rem 2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-
 }
 .gurusHeading{
     text-align: center;
@@ -177,7 +172,7 @@
 @media screen and (max-width: 769px){
     #guruSection{
         padding-top:90px;
-        padding-bottom: 25px;
+        padding-bottom: 35px;
     }
     .gurusHeading strong{
         font-size: 40px;
@@ -209,7 +204,7 @@
 }
 #whyCheapSection{
     background-color: #fff;
-    padding-top: 25px;
+    padding-top: 50px;
     }
 
 .transitionWhiteToWhite{
@@ -220,5 +215,11 @@
 }
 .gurusHeading.why{
     max-width: 800px;
+}
+@media screen and (max-width: 769px){
+    #whyCheapSection{
+    background-color: #fff;
+    padding-top: 35px;
+    }
 }
 /* #endregion */

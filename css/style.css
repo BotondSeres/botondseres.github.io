@@ -162,6 +162,10 @@ em {
     display: flex;
     position: relative;
 }
+.dividerDesign.Light{
+    background-color: white;
+    background-image: radial-gradient(circle, rgba(110, 161, 255, 1), rgb(110, 161, 255, .5) 40%, rgb(204, 208, 214,0 ));
+}
 
 #VSLcontainer {
   position: relative;
