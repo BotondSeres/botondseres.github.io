@@ -186,13 +186,15 @@
     background-color: #0e0c0c;
     border: 1px solid rgba(90, 90, 90, .21);
     border-radius: 20px;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr;
     grid-template-columns: 2.5fr 1.5fr;
     align-content: center;
     align-items: center;
     justify-content: center;
     margin-top: 0;
     padding: 30px 20px 20px 60px;
+    overflow: visible;
+    position: relative;
 }
 
 
@@ -246,13 +248,19 @@ img {
     line-height: 27px;
 }
 .breakdownElementProductImage{
-    max-width: 100%;
-    border-radius: 7px;
+    transform: scale3d(1.1,1.1,1);
+    border-radius: 10px;
     margin-left: 100px;
     margin-right: -50px;
     padding-top: 10px;
     padding-bottom: 10px;
+    max-width: 100%;
     grid-area: span 2 / span 1 / span 2 / span 1;
+}
+@media screen and (min-width: 1000px){
+    .phoneProductImage{
+        padding: 0px;
+    }
 }
 @media screen and (max-width: 991px) {
     .gradient-div-fill {
