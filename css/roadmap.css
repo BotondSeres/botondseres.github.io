@@ -55,7 +55,7 @@
         font-size: 6vw;
     }
 }
-#roadmapSubHeader{
+.roadmapSubHeader{
     margin: 0.67em 0;
     font-weight: normal;
     margin-bottom: 20px;
@@ -74,14 +74,14 @@
     max-width: 1000px;
 }
 @media screen and (max-width:1600px) {
-    #roadmapSubHeader{
+    .roadmapSubHeader{
         font-size: 1.8vw;
         line-height: 2vw;
         
     }
 }
 @media screen and (max-width:1200px) {
-    #roadmapSubHeader{
+    .roadmapSubHeader{
         font-size: 2vw;
         max-width: 80vw;
     }
@@ -344,7 +344,7 @@
     #timeLineScrollBackground {
         left: 56px;
     }
-    #roadmapSubHeader{
+    .roadmapSubHeader{
         font-size: 3vw;
         line-height: 4vw;
     }
