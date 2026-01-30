@@ -222,4 +222,23 @@
     padding-top: 35px;
     }
 }
+
+#macImage{
+    width: 40vw; 
+    z-index: 3; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+    #macImage{
+        width: 60vw; 
+    }
+}
+@media screen and (max-width: 480px) {
+
+    #macImage{
+        width: 70vw; 
+    }
+}
 /* #endregion */
